@@ -3,7 +3,7 @@
 
 
 class BinarySearchTree {
-  constructor (key = null, value =null, parent = null) {
+  constructor (key = null, value = null, parent = null) {
     this.key = key;
     this.value = value; 
     this.parent = parent;
@@ -18,7 +18,7 @@ class BinarySearchTree {
     }
     else if (key < this.key) {
       if (this.left == null) {
-        this.left = new BinarySearchTree(key, value); 
+        this.left = new BinarySearchTree(key, value, this); 
       }
       else {
         this.left.insert(key, value); 
@@ -113,3 +113,4 @@ class BinarySearchTree {
     return this.left._findMin(); 
   }
 }
+
